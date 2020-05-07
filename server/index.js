@@ -4,6 +4,8 @@ const massive = require('massive')
 const session = require('express-session')
 const authCtrl = require('./controllers/authController')
 const commentCtrl = require('./controllers/commentsController')
+const trailCtrl = require('./controllers/trailController')
+// const searchCtrl = require('./controllers/searchController')
 const{SERVER_PORT, CONNECTION_STRING,
 SESSION_SECRET} = process.env
 
@@ -28,6 +30,9 @@ app.get('/api/comments', commentCtrl.getComments)
 app.post('/api/comments', commentCtrl.addComment)
 app.put('/api/comments/:comment_id', commentCtrl.editComment)
 app.delete('/api/comments/:comment_id', commentCtrl.deleteComment)
+
+app.get('/api/trails', trailCtrl.getTrails)
+// app.get('/api/search', searchCtrl.getMinerals)
 
 
 massive({

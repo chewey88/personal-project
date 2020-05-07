@@ -1,0 +1,9 @@
+.home-body {
+    height: 760px;
+    width: 1519px;
+    background: url(https://cdn-assets.alltrails.com/uploads/photo/image/10754186/extra_large_47a10b8886a6764ad12dccc0bea0819e.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;    
+    background-size: cover;
+}

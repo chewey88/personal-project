@@ -8,16 +8,18 @@ CREATE TABLE comments (
     comment_id serial primary key,
     users_id INT references users(users_id),
     content varchar(2500),
-    created_at date
+    created_at date,
+    comment_region varchar(100)
 );
 
 CREATE TABLE trails (
     trail_id serial primary key,
     trail_region varchar(100),
-    trail_location decimal(10, 8),
     trail_name varchar(100),
     trail_length decimal,
-    trail_difficulty varchar(100)
+    trail_difficulty varchar(100),
+    trail_lat decimal,
+    trail_long decimal 
 );
 
 CREATE TABLE minerals (

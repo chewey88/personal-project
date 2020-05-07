@@ -1,0 +1,16 @@
+.header-box {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: rgba(27, 73, 9, 0.842);
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-links {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    /* position: relative; */
+    /* margin-left: auto; */ 
+}

@@ -6,15 +6,18 @@ module.exports = {
       
     },
     addComment: async (req, res) => {
-      const db = req.app.get('db')
-      const {users_id} = req.session.user
-      const {content} = req.body
+        const db = req.app.get('db')
+        if(!req.session.user) return res.status(400).send('Please login')
 
-      await db.add_comment([users_id, content])
-  
-      const comments = await db.get_comments()
-      res.status(200).send(comments)
+        const {users_id} = req.session.user
+        const {content, comment_region} = req.body
+
+
+        await db.add_comment([users_id, content, comment_region])
     
+        const comments = await db.get_comments()
+       return res.status(200).send(comments)
+      
     },
     editComment: async (req, res) => {
       const db =  req.app.get('db')
