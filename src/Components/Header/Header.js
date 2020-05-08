@@ -17,6 +17,7 @@ return (
         <h1>Top 10 Places to Hike and Rockhound</h1>
 
         <div className="nav-links">
+            <Link to='/'>Home</Link>
             <Link to='/northernUtah'>Northern Utah</Link>
             <Link to='/centralUtah'>Central Utah</Link>
             <Link to='/southernUtah'>Southern Utah</Link>

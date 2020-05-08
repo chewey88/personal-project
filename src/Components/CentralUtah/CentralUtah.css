@@ -1,0 +1,51 @@
+.central-body {
+  height: calc(100vh - 70px);
+  width: 100%;
+  background: url(https://cdn-assets.alltrails.com/uploads/photo/image/20918527/extra_large_3cfced14c70546ed3d4454f14e289461.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.central-top {
+  width: 100%;
+  display: flex;
+}
+
+.info-contain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: flex-start;
+  width: 50%;
+}
+
+.info-cards {
+  background-color: white;
+  margin: 5px;
+  width: 250px;
+  padding: 15px;
+}
+
+.map-central {
+  margin-right: 30px;
+  margin-top: 30px;
+  height: 600px;
+  width: 700px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px black;
+}
+
+.map-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pin {
+  height: 20px;
+  width: 15px;
+}

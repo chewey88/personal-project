@@ -1,9 +1,22 @@
 .home-body {
-    height: 760px;
-    width: 1519px;
-    background: url(https://cdn-assets.alltrails.com/uploads/photo/image/10754186/extra_large_47a10b8886a6764ad12dccc0bea0819e.jpg) no-repeat center center fixed;
+    height: calc(100vh - 70px);
+    width: 100%;
+    background: url(https://cdn-assets.alltrails.com/uploads/photo/image/20918527/extra_large_3cfced14c70546ed3d4454f14e289461.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;    
     background-size: cover;
+    
+}
+.map-home {
+    margin-left: 30px;
+    margin-top: 30px;
+    height: 550px;
+    width: 550px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px black;
+}
+.map-icon {
+    height: 30px;
+    width: 30px;
 }
