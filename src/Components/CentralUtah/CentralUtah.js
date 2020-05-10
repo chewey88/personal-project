@@ -62,14 +62,11 @@ const CentralUtah = ({ comments, fetchComments }) => {
                 onMouseEnter={() => setSelectedTrail(trail.trail_id)}
                 onMouseLeave={() => setSelectedTrail(null)}
               >
-                {trail.trail_name} {trail.trail_length} {trail.trail_difficulty}
-                <p>
-                  Grizzly Gulch is perfect if you live in on the Wasatch Front
-                  and want to spend some time outdoors without traveling very
-                  far to get there.Being only less than an hour outside of town,
-                  you can expect to find a beautiful hike with some some
-                  Malachite to find on your way.
-                </p>
+                <div> Name: {trail.trail_name} </div>
+                <div> Miles: {trail.trail_length} </div>
+                <div> Difficulty: {trail.trail_difficulty} </div>
+                <div> Rocks and Minerals: {trail.trail_minerals} </div>
+                <div> Details: {trail.trail_discrip} </div>
               </div>
             );
           })}
@@ -96,7 +93,7 @@ const CentralUtah = ({ comments, fetchComments }) => {
         </div>
       </div>
 
-      <div>
+      <div className="central-comment-container">
         <Comments comments={centralComments} region={"central"} />
       </div>
     </div>

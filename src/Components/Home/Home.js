@@ -2,23 +2,29 @@ import React, { useEffect, useState } from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios";
 import "./Home.css";
-import MapIcon from "../../Images/MapIcon.svg";
-
-const MapMarker = ({ text }) => (
-  <div>
-    {text}
-    <img src={MapIcon} />
-  </div>
-);
+import BlueMapIcon from "../../Images/BlueMapIcon.svg";
+import RedMapIcon from "../../Images/RedMapIcon.svg";
 
 function Home() {
   const [trails, setTrails] = useState([]);
+  const [selectedTrail, setSelectedTrail] = useState(null);
 
   useEffect(() => {
     axios.get("/api/trails").then((res) => {
       setTrails(res.data);
     });
   }, []);
+  const MapMarker = (trail) => {
+    const { text, id } = trail;
+    return (
+      <div className={"map-marker"}>
+        <img
+          className="pin"
+          src={selectedTrail === id ? RedMapIcon : BlueMapIcon}
+        />
+      </div>
+    );
+  };
 
   return (
     <div className="home-body">
@@ -36,7 +42,7 @@ function Home() {
             <MapMarker
               lat={trail.trail_lat}
               lng={trail.trail_long}
-              // text={trail.trail_name}
+              id={trail.trail_id}
             />
           ))}
         </GoogleMapReact>

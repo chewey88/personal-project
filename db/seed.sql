@@ -19,7 +19,8 @@ CREATE TABLE trails (
     trail_length decimal,
     trail_difficulty varchar(100),
     trail_lat decimal,
-    trail_long decimal 
+    trail_long decimal,
+    trail_discrip varchar(1000)
 );
 
 CREATE TABLE minerals (

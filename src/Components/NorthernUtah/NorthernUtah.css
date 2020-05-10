@@ -1,0 +1,66 @@
+.northern-body {
+  height: calc(100vh - 70px);
+  width: 100%;
+  background: url(https://0da7576c6af8dc90a8d9-cca51b9f97dde420bbbf39cd61d520a5.ssl.cf1.rackcdn.com/Enchantments-Prusik_Peak-reflection-1.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.northern-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.info-contain {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  padding-top: 25px;
+  /* justify-content: space-around; */
+  /* align-items: stretch; */
+  /* align-content: flex-start; */
+  width: 45%;
+  overflow: scroll;
+  height: 600px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.info-cards {
+  background-color: rgba(255, 255, 255, 0.603);
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px black;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.map-northern {
+  margin-right: 30px;
+  margin-top: 30px;
+  height: 600px;
+  width: 45%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px black;
+}
+
+.map-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pin {
+  height: 20px;
+  width: 15px;
+}
+
+.northern-comments {
+  min-height: 400px;
+  background-color: rgb(143, 0, 0);
+  border: 2px solid black;
+  box-shadow: 10px 10px 20px black;
+}
