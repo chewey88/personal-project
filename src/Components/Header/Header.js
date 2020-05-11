@@ -14,7 +14,7 @@ function Header(props) {
   console.log(props);
   return (
     <nav className="header-box">
-      <h1>Top 10 Places to Hike and Rockhound</h1>
+      <h1>Utah's Best Hiking With RockHounding</h1>
 
       <div className="nav-links">
         <Link to="/">Home</Link>

@@ -77,8 +77,8 @@ const NorthernUtah = ({ comments, fetchComments }) => {
               key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
             }}
             defaultCenter={{
-              lat: 39.5586,
-              lng: -111.8619,
+              lat: 41.223,
+              lng: -111.9738,
             }}
             defaultZoom={7.7}
           >

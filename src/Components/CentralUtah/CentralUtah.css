@@ -67,4 +67,7 @@
   background-color: rgb(143, 0, 0);
   border: 2px solid black;
   box-shadow: 10px 10px 20px black;
+  color: black;
+  font-family: sans-serif;
+  font-weight: 600;
 }

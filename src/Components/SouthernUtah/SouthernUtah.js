@@ -77,8 +77,8 @@ const SouthernUtah = ({ comments, fetchComments }) => {
               key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
             }}
             defaultCenter={{
-              lat: 39.5586,
-              lng: -111.8619,
+              lat: 37.7703,
+              lng: -111.6021,
             }}
             defaultZoom={7.7}
           >
