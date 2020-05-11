@@ -28,7 +28,7 @@ function Home() {
 
   return (
     <div className="home-body">
-      Home
+      .
       <div className="map-home">
         <GoogleMapReact
           bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}

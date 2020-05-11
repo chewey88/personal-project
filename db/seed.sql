@@ -21,6 +21,7 @@ CREATE TABLE trails (
     trail_lat decimal,
     trail_long decimal,
     trail_discrip varchar(1000)
+    trail_img varchar(1000)
 );
 
 CREATE TABLE minerals (
@@ -30,6 +31,6 @@ CREATE TABLE minerals (
 );
 
 CREATE TABLE trails_minerals_join (
-    mineral_id int REFERENCES trails(trail_id),
-    trail_id int REFERENCES minerals(mineral_id)
+    trail_id int REFERENCES trails(trail_id),
+    mineral_id int REFERENCES minerals(mineral_id)
 );
