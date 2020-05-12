@@ -1,7 +1,59 @@
-button {
-  height: 35px;
-  width: 55px;
-  background-color: black;
-  color: white;
+.comment-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.each-comment {
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: 88vw;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: sans-serif;
+  border: 2px solid gray;
   border-radius: 10px;
+}
+.username {
+  padding: 10px;
+  border-right: 2px solid black;
+  margin-right: 10px;
+  font-family: sans-serif;
+  color: yellow;
+}
+.edit-button {
+  height: 3vh;
+  width: 5vw;
+  background-color: rgba(168, 27, 27, 0.705);
+  color: black;
+  border-color: black;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px black;
+  font-size: large;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.save-button {
+  height: 3vh;
+  width: 5vw;
+  background-color: rgba(168, 27, 27, 0.705);
+  color: black;
+  border-radius: 10px;
+  border-color: black;
+  box-shadow: 10px 10px 20px black;
+  font-size: large;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.delete-button {
+  height: 3vh;
+  width: 5vw;
+  background-color: rgba(168, 27, 27, 0.705);
+  color: black;
+  border-radius: 10px;
+  border-color: black;
+  box-shadow: 10px 10px 20px black;
+  font-size: large;
+  font-weight: 600;
+  font-family: sans-serif;
 }

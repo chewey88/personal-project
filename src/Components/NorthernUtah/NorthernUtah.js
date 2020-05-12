@@ -67,7 +67,10 @@ const NorthernUtah = ({ comments, fetchComments }) => {
                 <div> Difficulty: {trail.trail_difficulty} </div>
                 <div> Rocks and Minerals: {trail.mineral_name} </div>
                 <div> Details: {trail.trail_discrip} </div>
-                <img className="malachite-img" src={trail.mineral_img} />
+                <div className="img-contain">
+                  <img className="trail-img" src={trail.trail_img} />
+                  <img className="malachite-img" src={trail.mineral_img} />
+                </div>
               </div>
             );
           })}

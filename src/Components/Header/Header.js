@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import { logoutUser } from "../../ducks/reducer";
 import axios from "axios";
 import "./header.css";
 
@@ -10,7 +11,12 @@ function Header(props) {
   // const handleSearch = () => {
   //     axios.get(`/api/search?${search}`)
   // }
-
+  const handleLogout = () => {
+    axios.delete("/auth/logout").then((res) => {
+      props.logoutUser();
+      props.history.push("/");
+    });
+  };
   console.log(props);
   return (
     <nav className="header-box">
@@ -32,7 +38,16 @@ function Header(props) {
                 maxLength='100'>                   
             </input>
         </div> */}
-      {props.isLoggedIn ? null : (
+      {props.isLoggedIn ? (
+        <button
+          className="logout-button"
+          onClick={() => {
+            handleLogout();
+          }}
+        >
+          Logout
+        </button>
+      ) : (
         <div className="log-reg">
           <Link to="/login">Login</Link>
           <Link to="/register">Register</Link>
@@ -47,4 +62,4 @@ const mapStateToProps = (state) => {
   return state;
 };
 
-export default connect(mapStateToProps)(Header);
+export default withRouter(connect(mapStateToProps, { logoutUser })(Header));

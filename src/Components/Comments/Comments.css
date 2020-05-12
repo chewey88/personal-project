@@ -1,10 +1,35 @@
+.posting-comments-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: x-large;
+  /* align-items: center; */
+}
+.post-container {
+  display: flex;
+  align-items: center;
+}
 input.comment-input {
-  height: 25px;
-  width: 70%;
-  background-color: red;
+  height: 5vh;
+  width: 88vw;
+  background-color: rgba(170, 11, 11, 0.829);
   color: black;
   border-radius: 10px;
   font-weight: 600;
   font-size: large;
-  display: flex;
+}
+.post-button {
+  /* display: flex; */
+  margin-left: 60px;
+  height: 5.5vh;
+  width: 7vw;
+  background-color: rgba(168, 27, 27, 0.705);
+  color: black;
+  border-color: black;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px black;
+  font-size: large;
+  font-weight: 600;
+  font-family: sans-serif;
 }

@@ -4,7 +4,7 @@ import { fetchComments } from "../../ducks/reducer";
 import { connect } from "react-redux";
 import "./Comment.css";
 
-function Comment({ comment, fetchComments }) {
+function Comment({ comment, fetchComments, user }) {
   const [editMode, changeEditMode] = useState(false);
   const [commentToEdit, changeEditComment] = useState(comment.content);
 
@@ -23,22 +23,37 @@ function Comment({ comment, fetchComments }) {
       fetchComments(res.data);
     });
   };
-
+  console.log(comment);
   return (
-    <div>
+    <div className="comment-container">
       {editMode === true ? (
         <div>
           <input
             value={commentToEdit}
             onChange={(e) => changeEditComment(e.target.value)}
           />
-          <button onClick={editComment}>Save</button>
+          <button className="save-button" onClick={editComment}>
+            Save
+          </button>
         </div>
       ) : (
-        comment.content
+        <div className="each-comment">
+          <div className="username">{comment.username}</div>
+          <div>{comment.content}</div>
+        </div>
       )}
-      <button onClick={() => changeEditMode(!editMode)}>Edit</button>
-      <button onClick={deleteComment}>Delete</button>
+
+      <div>
+        <button
+          className="edit-button"
+          onClick={() => changeEditMode(!editMode)}
+        >
+          Edit
+        </button>
+        <button className="delete-button" onClick={deleteComment}>
+          Delete
+        </button>
+      </div>
     </div>
   );
 }

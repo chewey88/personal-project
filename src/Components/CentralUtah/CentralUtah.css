@@ -23,7 +23,7 @@
   /* justify-content: space-around; */
   /* align-items: stretch; */
   /* align-content: flex-start; */
-  width: 45%;
+  width: 50vw;
   overflow: scroll;
   height: 600px;
   overflow-y: auto;
@@ -36,7 +36,7 @@
   box-shadow: 10px 10px 20px black;
   margin-bottom: 15px;
   padding: 15px;
-  font-size: large;
+  font-size: x-large;
   text-align: left;
   font-weight: 600;
   font-family: initial;
@@ -45,8 +45,8 @@
 .map-central {
   margin-right: 30px;
   margin-top: 30px;
-  height: 600px;
-  width: 45%;
+  height: 550px;
+  width: 40vw;
   border-radius: 10px;
   box-shadow: 10px 10px 20px black;
 }
@@ -63,15 +63,27 @@
 }
 
 .central-comment-container {
+  display: flex;
+  flex-direction: column;
   min-height: 400px;
+  margin-top: 10px;
   background-color: rgb(143, 0, 0);
-  border: 2px solid black;
+  border-top: 2px solid black;
   box-shadow: 10px 10px 20px black;
   color: black;
   font-family: sans-serif;
   font-weight: 600;
 }
+.img-contain {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trail-img {
+  height: 200px;
+  width: 300px;
+}
 .malachite-img {
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 300px;
 }

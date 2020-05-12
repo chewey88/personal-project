@@ -47,6 +47,16 @@ function Home() {
           ))}
         </GoogleMapReact>
       </div>
+      <p className="home-statement">
+        Utah is an extraordinary state for all things outdoors. With some of the
+        most beautiful geologic wonders anywhere. Utah also is a Rockhounder's
+        dream, with a large variety of rocks and minerals to collect and admire.
+        The issue is that the great spots to get the best rocks and minerals are
+        usually not to most "pretty" places to hike and the "famous" "pretty"
+        places to hike tend to be boring for Rockhounders. This compilation of
+        hikes and trails are great for both the scenic outdoor hiker and anyone
+        who loves to admire fun rocks and minerals.
+      </p>
     </div>
   );
 }

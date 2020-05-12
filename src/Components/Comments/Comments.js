@@ -5,7 +5,7 @@ import { fetchComments } from "../../ducks/reducer";
 import Comment from "../Comment/Comment";
 import "./Comments.css";
 
-function Comments({ comments, region, fetchComments }) {
+function Comments({ comments, region, fetchComments, user }) {
   const [content, setContent] = useState("");
 
   const createComment = () => {
@@ -25,19 +25,29 @@ function Comments({ comments, region, fetchComments }) {
   };
 
   return (
-    <div>
+    <div className="posting-comments-container">
+      Comments:
       {comments.map((comm) => (
-        <Comment comment={comm} />
+        <Comment comment={comm} user={user} />
       ))}
-
-      <input
-        className="comment-input"
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-      />
-      <button onClick={createComment}>Post</button>
+      <div className="post-container">
+        <input
+          placeholder="Write your comment here..."
+          className="comment-input"
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+        />
+        <button className="post-button" onClick={createComment}>
+          Post Comment
+        </button>
+      </div>
     </div>
   );
 }
+const mapStateToProps = (state) => {
+  return {
+    user: state.userName,
+  };
+};
 
-export default connect(null, { fetchComments })(Comments);
+export default connect(mapStateToProps, { fetchComments })(Comments);
