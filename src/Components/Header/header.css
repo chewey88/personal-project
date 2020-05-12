@@ -57,3 +57,29 @@ a:hover {
   width: 9vw;
   background-color: rgb(143, 0, 0);
 }
+.hamburger-icon {
+  height: 5%;
+  position: absolute;
+  right: 1%;
+  display: none;
+}
+@media (max-width: 1450px) {
+  .nav-links {
+    display: none;
+  }
+  .log-reg {
+    display: none;
+  }
+  .hamburger-icon {
+    display: flex;
+  }
+}
+@media (max-width: 800px) {
+  .header-box {
+    width: 100vw;
+  }
+  h1 {
+    font-size: 2.5vh;
+    /* margin: 0; */
+  }
+}

@@ -17,7 +17,8 @@ function Header(props) {
       props.history.push("/");
     });
   };
-  console.log(props);
+  const toggleMobileMenu = () => {};
+
   return (
     <nav className="header-box">
       <h1>Utah's Best Hiking With RockHounding</h1>
@@ -28,6 +29,11 @@ function Header(props) {
         <Link to="/centralUtah">Central Utah</Link>
         <Link to="/southernUtah">Southern Utah</Link>
       </div>
+      <img
+        onClick={toggleMobileMenu}
+        className="hamburger-icon"
+        src="https://cdn4.iconfinder.com/data/icons/navigation-40/24/hamburger-menu-512.png"
+      />
       {/* <div className='search-bar'>
             <input 
                 onChange={(e) => {

@@ -40,3 +40,24 @@
   font-family: sans-serif;
   font-size: xx-large;
 }
+@media (max-width: 1450px) {
+  .home-statement {
+    font-size: x-large;
+  }
+  .map-home {
+    height: 450px;
+  }
+}
+@media (max-width: 1000px) {
+  .home-statement {
+    font-size: large;
+  }
+  .map-home {
+    height: 400px;
+  }
+}
+@media (max-width: 800px) {
+  .home-body {
+    width: 100vw;
+  }
+}
